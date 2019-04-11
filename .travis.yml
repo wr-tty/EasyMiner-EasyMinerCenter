@@ -13,7 +13,7 @@ services:
   - docker
 
 script:
-  - docker-compose up --exit-code-from tarus --force-recreate tarus
+  - docker-compose up --exit-code-from taurus --force-recreate taurus
 
 after_script:
 #  - openssl aes-256-cbc -K $encrypted_321c4c28b3f1_key -iv  $encrypted_321c4c28b3f1_iv -in ./DeploymentKeys/deploy_key_center.enc -out /tmp/deploy_key -d
