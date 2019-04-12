@@ -16,6 +16,10 @@ script:
   - docker-compose up --exit-code-from taurus --force-recreate taurus
 
 after_script:
+# dump log files
+  - cat /EasyMiner-Performance-Tests/artifacts/results/jmeter.log
+  - cat /EasyMiner-Performance-Tests/artifacts/results/error.jtl
+  - cat /EasyMiner-Performance-Tests/artifacts/results/bzt.log
 #  - openssl aes-256-cbc -K $encrypted_321c4c28b3f1_key -iv  $encrypted_321c4c28b3f1_iv -in ./DeploymentKeys/deploy_key_center.enc -out /tmp/deploy_key -d
 #  - eval "$(ssh-agent -s)"
 #  - chmod 600 /tmp/deploy_key
