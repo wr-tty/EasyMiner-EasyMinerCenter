@@ -6,7 +6,7 @@ git:
 before_install:
   - git clone -b master --single-branch https://github.com/wr-tty/EasyMiner-Performance-Tests.git EasyMiner-Performance-Tests
   - git clone -b master --single-branch https://github.com/wr-tty/EasyMiner-Performance-Testing-Env.git EasyMiner-Performance-Testing-Env
-  - docker build -t wrtty/easyminer-frontend:dev https://github.com/wr-tty/EasyMiner-EasyMinerCenter.git#test:/
+#  - docker build -t wrtty/easyminer-frontend:dev https://github.com/wr-tty/EasyMiner-EasyMinerCenter.git#test:/
   - cd EasyMiner-Performance-Testing-Env
 
 services:
