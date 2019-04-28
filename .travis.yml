@@ -6,7 +6,6 @@ git:
 before_install:
   - git clone -b master --single-branch https://github.com/wr-tty/EasyMiner-Performance-Tests.git EasyMiner-Performance-Tests
   - git clone -b master --single-branch https://github.com/wr-tty/EasyMiner-Performance-Testing-Env.git EasyMiner-Performance-Testing-Env
-#  - docker build -t wrtty/easyminer-frontend:dev https://github.com/wr-tty/EasyMiner-EasyMinerCenter.git#test:/
   - cd EasyMiner-Performance-Testing-Env
 
 services:
@@ -16,8 +15,3 @@ script:
   - docker-compose up --exit-code-from taurus --force-recreate taurus
 
 after_script:
-#  - openssl aes-256-cbc -K $encrypted_321c4c28b3f1_key -iv  $encrypted_321c4c28b3f1_iv -in ./DeploymentKeys/deploy_key_center.enc -out /tmp/deploy_key -d
-#  - eval "$(ssh-agent -s)"
-#  - chmod 600 /tmp/deploy_key
-#  - ssh-add /tmp/deploy_key
-#  - ./export-results-to-gh-pages.sh
